@@ -1,0 +1,39 @@
+body {
+    margin:0;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    flex-basis:200px;
+    margin:5px;
+    padding:10px;
+    background-color: grey;
+    font-weight:bold;
+    color:white;
+    border-radius: 10px;
+    position:relative;
+}
+
+form {
+    margin:15px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+label {
+    padding-left:5px;
+}
+
+button {
+    margin-left:5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    left: 192px;
+}
