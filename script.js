@@ -54,7 +54,16 @@ const button = document.querySelector('.add-user');
 button.addEventListener('click', () => {
     const name = document.querySelector(".name").value;
     const age = document.querySelector(".age").value;
-    createUsers(name,age);
+    try {
+    if(0<age && age <100) {
+        createUsers(name,age);
+    } else {
+        throw new Error
+    }
+    } catch (err) {
+        console.log("enter correct name and age");
+    }
+
 })
 
 
