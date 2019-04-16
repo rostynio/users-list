@@ -16,9 +16,10 @@ async function getUsers() {
 }
 getUsers();
 
+const container = document.querySelector(".container");
+
 function renderUsers(users) {
     users.forEach(item => {
-        const container = document.querySelector(".container");
         const userElement = document.createElement('div');
         userElement.classList.add('user');
         userElement.innerHTML = `
@@ -50,20 +51,18 @@ async function createUsers(name, age){
 }
 
 const button = document.querySelector('.add-user');
+const error = document.querySelector('.error');
 
 button.addEventListener('click', () => {
-    const name = document.querySelector(".name").value;
-    const age = document.querySelector(".age").value;
-    try {
-    if(0<age && age <100) {
-        createUsers(name,age);
+    const name = document.querySelector(".name");
+    const age = document.querySelector(".age");;
+    if(0<age.value && age.value <100){
+        createUsers(name.value,age.value);
+        error.style.display = "none";
     } else {
-        throw new Error
-    }
-    } catch (err) {
-        console.log("enter correct name and age");
-    }
-
+        error.innerText = 'enter correct name and age';
+        error.style.display = "block";
+    } 
 })
 
 

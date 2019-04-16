@@ -37,3 +37,9 @@ button {
     top: 15px;
     left: 192px;
 }
+
+.error {
+    width:100%;
+    background: red;
+    padding-left:15px;
+}
